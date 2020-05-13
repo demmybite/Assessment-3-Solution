@@ -1,0 +1,11 @@
+Section 1: 
+	1.	SELECT COUNT(DISTINCT Name) AS Total_Users FROM TeamAdemola; 
+	2.	SELECT COUNT(*) AS Users_In_Accounting FROM (SELECT * FROM TeamAdemola WHERE Department='Accounting') AS TeamAdemola;
+	3.	SELECT COUNT(*) AS Pending_Users FROM (SELECT * FROM TeamAdemola WHERE Status='Pending') AS TeamAdemola;
+	4.	SELECT Name FROM TeamAdemola ORDER BY Created_dt ASC LIMIT 5;
+	5.	SELECT Name, Age FROM TeamAdemola WHERE Age > 18 AND Age < 26;
+	6.	SELECT Name, Created_dt FROM TeamAdemola WHERE Created_dt = '02-01-2020';
+	7.	SELECT Name, Created_dt FROM TeamAdemola WHERE Created_dt > '04-01-2020' AND Created_dt < '06-01-2020';
+	8.	UPDATE TeamAdemola SET Status='Activated' WHERE Status='Pending';
+	9.	UPDATE TeamAdemola SET Name='Timothy' WHERE Name='Tim';
+	10.	SELECT Department, COUNT(Name) FROM TeamAdemola GROUP BY Department;
